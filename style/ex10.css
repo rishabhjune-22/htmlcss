@@ -1,0 +1,143 @@
+img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.header{
+    display:flex ;
+    background-color:chartreuse;
+ 
+    align-items: center;
+    padding: 5px;
+}
+.logo
+{
+
+
+}
+
+h1{
+margin: auto;
+}
+
+.navbar{
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: aqua;
+padding: 0%;
+}
+
+.ul-nav{
+list-style: none;
+display: flex;
+margin: 0%;
+padding:0%;
+
+}
+
+.ul-nav li  a {
+
+font-size: 30px;
+color: white;
+display:block;
+text-align: center;
+padding: 15px;
+text-decoration: none;
+
+
+}
+
+
+
+.ul-nav li a:hover {
+background-color: #111;
+}
+
+.container{
+display: flex;
+background-color: brown;
+height:calc(100vh-530px);
+justify-content: center;
+
+}
+main{
+flex: 8;
+background-color: bisque;
+overflow: auto;
+
+}
+
+aside{
+flex: 2;
+
+background-color:cadetblue;   
+
+}
+
+.notihead{
+display: table;
+margin: 0 auto;
+}
+#notification
+{
+list-style-type: none;
+display: inline-block;
+
+
+}
+
+#notification li{
+
+padding-bottom: 20px;
+}
+
+footer{
+width: 100%;
+
+display: flex;
+position: fixed;
+bottom:0px;
+justify-content: space-between;
+padding: 5px;
+background-color: crimson;
+}
+
+.social-link ul
+{
+list-style-type: none;
+margin: 0; 
+padding: 0; 
+display: flex; 
+
+}
+
+.social-link li{
+padding: 5px;
+}
+
+.social-link{
+
+} 
+
+.contact-us{
+
+
+
+}
+p{
+
+
+}
+
+span{
+color: white;
+font-size:x-large
+}
+
+
+button{
+background-color: blue;
+color: white;
+}
