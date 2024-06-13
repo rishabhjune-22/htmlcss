@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React DOM Check</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://images.pexels.com/photos/3283142/pexels-photo-3283142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center ;
+            background-size: cover;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #regularDiv, #reactDiv {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        #regularDiv {
+            background-color: red;
+        }
+
+        #reactDiv {
+            background-color: yellow;
+        }
+
+        #regularDiv:hover, #reactDiv:hover {
+            transform: scale(1.05);
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DIGITAL CLOCK</h1>
+
+        <div id="regularDiv">this should change</div>
+
+        <div id="reactDiv">this should change</div>
+    </div>
+
+    <script type="text/babel">
+        const rootNode = ReactDOM.createRoot(document.getElementById("reactDiv"));
+
+        function renderThis() {
+            document.getElementById("regularDiv").innerHTML = `
+                <input/>
+                <p>${new Date()}</p>
+            `;
+
+            const myElem = (
+                <div>
+                    <input />
+                <marquee behavior="" direction=""><p>{new Date().toString()}</p></marquee>    
+                </div>
+            );
+            rootNode.render(myElem);
+        }
+
+        setInterval(renderThis, 1000);
+    </script>
+</body>
+</html>
